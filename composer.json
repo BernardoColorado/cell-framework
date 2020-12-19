@@ -1,0 +1,19 @@
+{
+  "require": {
+    "slim/slim": "^3.12",
+    "twig/twig": "^2.11",
+    "slim/twig-view": "^2.5",
+    "respect/validation": "^1.1",
+    "doctrine/orm": "^2.7",
+    "symfony/yaml": "2.*",
+    "phpmailer/phpmailer": "~6.1",
+    "google/cloud-bigquery": "^1.20"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src",
+      "Core\\": "core",
+      "DomainModel\\": "domainmodel"
+    }
+  }
+}
