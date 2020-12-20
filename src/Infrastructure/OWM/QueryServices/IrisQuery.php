@@ -2,20 +2,20 @@
 
 namespace App\OWM\QueryServices;
 
-use Core\OWM\EntityManager\BaseBigQueryEntityManager;
+use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
 
 class IrisFindAllQuery{
 
   protected $em;
 
-  public function __construct(BaseBigQueryEntityManager $em){
+  public function __construct(BaseOWMEntityManager $em){
     
     $this->em = $em;
     $this->repository = $this->em->createRepository('iris');
 
   }
 
-  public function read($bigQueryQueryTicket):array{
+  public function read($owmQueryTicket):array{
 
     return $this->repository->findAll();
 

@@ -4,7 +4,7 @@ namespace Core\Infrastructure\OWM\EntityManager;
 
 use Google\Cloud\BigQuery\BigQueryClient;
 
-abstract class BaseBigQueryEntityManager{
+abstract class BaseOWMEntityManager{
 
   public abstract function createRepository(string $table):?object;
 

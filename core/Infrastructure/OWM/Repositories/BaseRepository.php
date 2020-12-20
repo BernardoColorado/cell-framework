@@ -1,14 +1,14 @@
 <?php
 
-namespace Core\OWM\Repositories;
+namespace Core\Infrastructure\OWM\Repositories;
 
-use Core\OWM\EntityManager\BaseBigQueryEntityManager;
+use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
 
 abstract class BaseRepository{
 
   protected $em;
 
-  public function __construct(BaseBigQueryEntityManager $em){
+  public function __construct(BaseOWMEntityManager $em){
 
     $this->em = $em;
     

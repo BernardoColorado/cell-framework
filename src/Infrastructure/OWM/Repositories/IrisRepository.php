@@ -2,14 +2,14 @@
 
 namespace App\Repositories;
 
-use Core\OWM\EntityManager\BaseBigQueryEntityManager;
-use Core\OWM\Repositories\BaseRepository;
+use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
+use Core\Infrastructure\OWM\Repositories\BaseRepository;
 
 class IrisRepository extends BaseRepository{
 
   protected $em = null;
 
-  public function __construct(BaseBigQueryEntityManager $em){
+  public function __construct(BaseOWMEntityManager $em){
 
     $this->em = $em;
     

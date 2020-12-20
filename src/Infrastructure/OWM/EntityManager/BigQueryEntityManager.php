@@ -3,16 +3,13 @@
 namespace App\OWM\EntityManager;
 
 use App\Repositories\IrisRepository;
-use Core\OWM\EntityManager\BaseBigQueryEntityManager;
+use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
 use Google\Cloud\BigQuery\BigQueryClient;
 
-class BigQueryEntityManager extends BaseBigQueryEntityManager{
+class OWMEntityManager extends BaseOWMEntityManager{
 
-  //single instance
   protected static $instance = null;
-  //repo pool
   protected static $repositories = [];
-  //nested BQ client
   protected $bigQueryClient;
    
   //protected constructor
