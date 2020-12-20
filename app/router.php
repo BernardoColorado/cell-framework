@@ -1,3 +1,3 @@
 <?php
 
-$app->get('/', App\Controllers\HomeController::class.':index');
+$app->get('/', App\Infrastructure\Http\Controllers\HomeController::class.':index');
