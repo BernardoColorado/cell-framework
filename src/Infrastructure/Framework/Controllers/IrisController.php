@@ -1,11 +1,11 @@
 <?php
 //
-namespace App\Infrastructure\Http\Controllers;
+namespace App\Infrastructure\Framework\Controllers;
 //
 use Psr\Container\ContainerInterface as ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface as RequestInterface;
 use Psr\Http\Message\ResponseInterface as ResponseInterface;
-use Core\Infrastructure\Http\Controllers\Controller as Controller;
+use Core\Infrastructure\Framework\Controllers\Controller as Controller;
 
 //controlador de inicio
 class IrisController extends Controller{

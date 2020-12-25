@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\Infrastructure\Http\Controllers;
+namespace Core\Infrastructure\Framework\Controllers;
 
 use Psr\Container\ContainerInterface as ContainerInterface;
-use Core\Infrastructure\Http\Controllers\ControllerInterface as ControllerInterface;
+use Core\Infrastructure\Framework\Controllers\ControllerInterface as ControllerInterface;
 
 abstract class Controller implements ControllerInterface{
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\OWM\QueryServices;
+namespace App\Application\OWM\QueryServices;
 
 use Core\Application\OWM\QueryServices\OWMQueryService;
 use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;

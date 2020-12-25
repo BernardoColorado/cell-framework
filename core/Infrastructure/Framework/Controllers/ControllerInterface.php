@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Infrastructure\Http\Controllers;
+namespace Core\Infrastructure\Framework\Controllers;
 use Psr\Container\ContainerInterface as ContainerInterface;
 
 interface ControllerInterface{

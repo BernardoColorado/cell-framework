@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Repositories;
+namespace App\Infrastructure\OWM\Repositories;
 
 use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
 use Core\Infrastructure\OWM\Repositories\BaseRepository;
