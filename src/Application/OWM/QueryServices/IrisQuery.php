@@ -2,9 +2,10 @@
 
 namespace App\OWM\QueryServices;
 
+use Core\Application\OWM\QueryServices\OWMQueryService;
 use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
 
-class IrisFindAllQuery{
+class IrisFindAllQuery extends OWMQueryService{
 
   protected $em;
 
@@ -15,7 +16,7 @@ class IrisFindAllQuery{
 
   }
 
-  public function read($owmQueryTicket):array{
+  public function read(array $args):array{
 
     return $this->repository->findAll();
 
