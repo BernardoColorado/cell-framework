@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Infrastructure\OWM\EntityManager;
+namespace Core\Application\OWM\EntityManager;
 
 use Google\Cloud\BigQuery\BigQueryClient;
 

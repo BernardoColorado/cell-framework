@@ -1,9 +1,9 @@
 <?php
 
-namespace App\OWM\EntityManager;
+namespace App\Application\OWM\EntityManager;
 
-use App\Repositories\IrisRepository;
-use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
+use App\Application\OWM\Repositories\IrisRepository;
+use Core\Application\OWM\EntityManager\BaseOWMEntityManager;
 use Google\Cloud\BigQuery\BigQueryClient;
 
 class OWMEntityManager extends BaseOWMEntityManager{

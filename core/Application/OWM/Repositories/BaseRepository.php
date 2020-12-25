@@ -1,8 +1,8 @@
 <?php
 
-namespace Core\Infrastructure\OWM\Repositories;
+namespace Core\Application\OWM\Repositories;
 
-use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
+use Core\Application\OWM\EntityManager\BaseOWMEntityManager;
 
 abstract class BaseRepository{
 

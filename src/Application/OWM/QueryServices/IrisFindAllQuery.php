@@ -3,7 +3,7 @@
 namespace App\Application\OWM\QueryServices;
 
 use Core\Application\OWM\QueryServices\OWMQueryService;
-use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
+use Core\Application\OWM\EntityManager\BaseOWMEntityManager;
 
 class IrisFindAllQuery extends OWMQueryService{
 

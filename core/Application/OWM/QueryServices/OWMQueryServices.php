@@ -2,7 +2,7 @@
 
 namespace Core\Application\OWM\QueryServices;
 
-use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
+use Core\Application\OWM\EntityManager\BaseOWMEntityManager;
 
 abstract class OWMQueryService{
 

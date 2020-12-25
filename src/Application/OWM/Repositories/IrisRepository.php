@@ -1,9 +1,9 @@
 <?php 
 
-namespace App\Infrastructure\OWM\Repositories;
+namespace App\Application\OWM\Repositories;
 
-use Core\Infrastructure\OWM\EntityManager\BaseOWMEntityManager;
-use Core\Infrastructure\OWM\Repositories\BaseRepository;
+use Core\Application\OWM\EntityManager\BaseOWMEntityManager;
+use Core\Application\OWM\Repositories\BaseRepository;
 
 class IrisRepository extends BaseRepository{
 

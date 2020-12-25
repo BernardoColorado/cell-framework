@@ -1,6 +1,6 @@
 <?php
 
-namespace App\OWM\Tickets;
+namespace App\Application\Application\OWM\Tickets;
 
 class BigqueryQueryTicket{
 
