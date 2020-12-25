@@ -1,4 +1,4 @@
 <?php
 
-$app->get('/', App\Infrastructure\Http\Controllers\HomeController::class.':index');
-$app->get('/bigquery-sample/iris', App\Infrastructure\Http\Controllers\IrisController::class.':index');
+$app->get('/', App\Infrastructure\Framework\Controllers\HomeController::class.':index');
+$app->get('/bigquery-sample/iris', App\Infrastructure\Framework\Controllers\IrisController::class.':index');
