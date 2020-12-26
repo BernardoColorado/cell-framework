@@ -1,10 +1,12 @@
 <?php
 
-namespace Http\Validators;
+namespace Core\Infrastructure\Framework\Validators;
 
 use Psr\Http\Message\ServerRequestInterface as RequestInterface;
-use Http\Dtos\CleanRequestInterface;
-use Http\Dtos\RequestErrorsInterface;
+
+use Core\Infrastructure\Framework\Dtos\CleanRequestInterface;
+use Core\Infrastructure\Framework\Dtos\RequestErrorsInterface;
+
 
 abstract class FormValidator implements RequestValidatorInterface{
 

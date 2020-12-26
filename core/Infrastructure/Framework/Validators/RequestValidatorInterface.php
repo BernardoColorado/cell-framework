@@ -1,9 +1,9 @@
 <?php
 
-namespace Http\Validators;
+namespace Core\Infrastructure\Framework\Validators;
 
-use Http\Dtos\CleanRequestInterface;
-use Http\Dtos\RequestErrorsInterface;
+use Core\Infrastructure\Framework\Dtos\CleanRequestInterface;
+use Core\Infrastructure\Framework\Dtos\RequestErrorsInterface;
 
 interface RequestValidatorInterface{
 

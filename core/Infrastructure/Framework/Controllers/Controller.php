@@ -8,7 +8,7 @@ use Core\Infrastructure\Framework\Controllers\ControllerInterface as ControllerI
 abstract class Controller implements ControllerInterface{
 
     protected $container;
-    protected $entityManager;
+    protected $em;
     
     public abstract function __construct(ContainerInterface $container);
 

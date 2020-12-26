@@ -12,10 +12,9 @@ class HomeController extends Controller{
 
   public function __construct(ContainerInterface $container){
 
-    //contenedor
     $this->container=$container;
     $this->twig=$this->container['twig'];
-    //orm
+    
     $this->entityManager = $this->container['entity-manager'];
 
   }

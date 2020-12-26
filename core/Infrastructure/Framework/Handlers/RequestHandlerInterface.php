@@ -1,8 +1,8 @@
 <?php
 
-namespace Core\Handlers;
+namespace Core\Infrastructure\Framework\Handlers;
 
-use Http\Validators\RequestValidatorInterface;
+use Core\Infrastructure\Validators\RequestValidatorInterface;
 
 interface RequestHandlerInterface{
 

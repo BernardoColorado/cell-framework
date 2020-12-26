@@ -1,6 +1,6 @@
 <?php
 
-namespace Http\Dtos;
+namespace Core\Infrastructure\Framework\Dtos;
 
 interface RequestErrorsInterface{
   
