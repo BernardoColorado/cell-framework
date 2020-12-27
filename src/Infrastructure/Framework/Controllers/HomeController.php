@@ -18,7 +18,6 @@ class HomeController extends Controller{
     
     //
     $this->em = $this->container['entity-manager'];
-    $this->owmEm = $this->container['owm-entity-manager'];
 
   }
 

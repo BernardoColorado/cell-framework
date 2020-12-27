@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-{% include 'partials/head/head.php' %}
+{% include 'templates/partials/head/head.php' %}
 </head>
-
 <body>
-
   <!-- Wrapper -->
   <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
-    {% include 'partials/sidebar/sidebar.php' %}
+    {% include 'templates/partials/sidebar/sidebar.php' %}
     <!-- End Sidebar -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
       <!--Navbar-->
-      {% include 'partials/navbar/navbar-section.php' %}
+      {% include 'templates/partials/navbar/navbar-section.php' %}
       <!--End Navbar-->
 
       <!--=============================================================================-->
@@ -30,9 +27,10 @@
 
     </div>
     <!-- End Content -->
+
   </div>
   <!--End Wrapper-->
-  {% include 'partials/feet/feet-dependencies.php' %}
+  {% include 'templates/partials/feet/feet-dependecies.php' %}
 </body>
 
 </html>

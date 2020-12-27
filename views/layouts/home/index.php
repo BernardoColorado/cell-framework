@@ -1,0 +1,1 @@
+{% extends 'templates/globals/base-template.php' %}
