@@ -3,11 +3,9 @@
 use Slim\Container;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager as DoctrineEntityManager;
-use App\OWM\EntityManager\BigQueryEntityManager;
-
+use App\Application\OWM\EntityManager\OWMEntityManager;
 
 require_once ROOT_DIR.'/config/config.php';
-
 
 $container = new Container(
   $app_config
@@ -45,10 +43,9 @@ $container['twig']=function(Container $container){
 
 };
 
-
 $container['owm-entity-manager']=function(Container $container){
 
-  return new BigQueryEntityManager($container['google']['bigquery']);
+  return new OWMEntityManager($container['google']['bigquery']);
 
 };
 

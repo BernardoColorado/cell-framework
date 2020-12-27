@@ -17,7 +17,7 @@ class UserController extends Controller{
     $this->twig=$this->container['twig'];
     
     //orm y entidades
-    $this->entityManager = $this->container['entity-manager'];
+    $this->em = $this->container['entity-manager'];
 
   }
 

@@ -12,15 +12,19 @@ class HomeController extends Controller{
 
   public function __construct(ContainerInterface $container){
 
+    //
     $this->container=$container;
     $this->twig=$this->container['twig'];
     
-    $this->entityManager = $this->container['entity-manager'];
+    //
+    $this->em = $this->container['entity-manager'];
+    $this->owmEm = $this->container['owm-entity-manager'];
 
   }
 
   public function index(RequestInterface $request, $response){
 
+    //
     $viewModel=[];
     $this->twig->render($response,'layouts/home/index.php',$viewModel);
 
