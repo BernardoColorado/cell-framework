@@ -1,6 +1,6 @@
 <?php
 
-namespace DomainModel\Entities;
+namespace App\DomainModel\Entities;
 use DateTimeInterface;
 
 class User{

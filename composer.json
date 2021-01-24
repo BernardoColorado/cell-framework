@@ -12,8 +12,7 @@
   "autoload": {
     "psr-4": {
       "App\\": "src",
-      "Core\\": "core",
-      "DomainModel\\": "domainmodel"
+      "Core\\": "core"
     }
   }
 }
