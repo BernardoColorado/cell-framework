@@ -14,9 +14,7 @@ class OWMEntityManager extends BaseOWMEntityManager{
    
   //protected constructor
   public function __construct(array $settings){
-
     $this->bigQueryClient = new BigQueryClient($settings);
-
   }
 
   //singleton function
