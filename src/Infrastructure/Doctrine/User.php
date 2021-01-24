@@ -12,12 +12,9 @@ class DoctrineUser extends User{
   protected $createdDateTime;
 
   public function __construct(string $nickname,string $password){
-
     $this->setNickname($nickname);
     $this->setPassword($password);
-
   }
-
   public function setNickname(string $nickname):void{
     $this->nickname = $nickname;
   }
