@@ -11,4 +11,27 @@ class DoctrineUser extends User{
   protected $password;
   protected $createdDateTime;
 
+  public function __construct(string $nickname,string $password){
+
+    $this->setNickname($nickname);
+    $this->setPassword($password);
+
+  }
+
+  public function setNickname(string $nickname):void{
+    $this->nickname = $nickname;
+  }
+  public function getNickname():string{
+    return $this->nickname;
+  }
+  public function setPassword(string $password):void{
+    $this->password=password_hash($password,PASSWORD_BCRYPT,['cost'=>10]);
+  }
+  public function validatePassword(string $password):bool{
+    return password_verify($password,$this->password);
+  }
+  public function getCreatedDateTime():DateTimeInterface{
+    return $this->createdDateTime;
+  }
+
 }
