@@ -2,7 +2,7 @@
 
 namespace App\DomainModel\Repositories;
 
-use App\DomainModel\Entities\User;
+use App\User\DomainModel\Entities\User;
 
 abstract class UserRepository{
 
