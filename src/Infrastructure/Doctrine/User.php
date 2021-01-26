@@ -11,7 +11,11 @@ class DoctrineUser extends User{
   protected $password;
   protected $createdDateTime;
 
-  public function __construct(string $nickname,string $email,string $password){
+  public function __construct(
+    string $nickname,
+    string $email,
+    string $password
+    ){
     $this->setNickname($nickname);
     $this->setEmail($email);    
     $this->setPassword($password);
