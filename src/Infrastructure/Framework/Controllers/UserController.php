@@ -23,7 +23,7 @@ class UserController extends Controller{
 
   public function login(RequestInterface $request, $response){
 
-    //
+    //vista del model
     $viewModel=[];
     $this->twig->render($response,'layouts/home/index.php',$viewModel);
 
