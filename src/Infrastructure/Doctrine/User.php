@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Infrastructure\Doctrine\Entities;
-use App\DomainModel\Entities\User;
+use App\User\DomainModel\Entities\User;
 use DateTimeInterface;
 
 class DoctrineUser extends User{
@@ -11,9 +11,16 @@ class DoctrineUser extends User{
   protected $password;
   protected $createdDateTime;
 
-  public function __construct(string $nickname,string $password){
+  public function __construct(string $nickname,string $email,string $password){
     $this->setNickname($nickname);
+    $this->setEmail($email);    
     $this->setPassword($password);
+  }
+  public function setEmail(string $email):void{
+    $this->email = $email;
+  }
+  public function getEmail():string{
+    return $this->email;
   }
   public function setNickname(string $nickname):void{
     $this->nickname = $nickname;
