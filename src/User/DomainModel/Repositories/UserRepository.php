@@ -8,5 +8,5 @@ abstract class UserRepository{
 
   public abstract function findOneByNickname(string $nickname):User;
   public abstract function findOneByEmail(string $email):User;
-  
+
 }
