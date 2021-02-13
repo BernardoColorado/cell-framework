@@ -1,14 +1,29 @@
 <?php
 
-namespace App\Infrastructure\Doctrine\Entities;
+namespace App\User\Infrastructure\Doctrine\Entities;
 use App\User\DomainModel\Entities\User;
 use DateTimeInterface;
-
+/**
+ * @ORM\Table(name="users")
+ */
 class DoctrineUser extends User{
-
+  /** 
+   * @ORM\Id
+   * @ORM\Column(type="integer", name="id")
+   * @ORM\GeneratedValue
+   */
   protected $id;
+  /** 
+   * @ORM\Column(type="string", length=64, name="nickname", unique=true) 
+   */
   protected $nickname;
+  /** 
+   * @ORM\Column(type="string", length=256, name="nickname", unique=true) 
+   */
   protected $password;
+  /**
+   * @ORM\Column(name="created_at", type="datetime", options={"default": "CURRENT_TIMESTAMP"})
+   */
   protected $createdDateTime;
 
   public function __construct(
