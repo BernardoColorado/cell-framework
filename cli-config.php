@@ -1,6 +1,6 @@
 <?php
 //
-define('ROOT_DIR','/var/www/html/ferrumsa-ultimate');
+define('ROOT_DIR','/var/www/html/cell-framework');
 //
 require_once ROOT_DIR."/vendor/autoload.php";
 require_once ROOT_DIR."/config/bootstrap.php";

@@ -1,9 +1,11 @@
 <?php
 
 namespace App\User\Infrastructure\Doctrine\Entities;
+use Doctrine\ORM\Mapping as ORM;
 use App\User\DomainModel\Entities\User;
 use DateTimeInterface;
 /**
+ * @ORM\Entity(repositoryClass="App\User\Infrastructure\Repositories")
  * @ORM\Table(name="users")
  */
 class DoctrineUser extends User{
@@ -14,15 +16,19 @@ class DoctrineUser extends User{
    */
   protected $id;
   /** 
-   * @ORM\Column(type="string", length=64, name="nickname", unique=true) 
+   * @ORM\Column(type="string", length=256, name="nickname", unique=true) 
    */
   protected $nickname;
   /** 
-   * @ORM\Column(type="string", length=256, name="nickname", unique=true) 
+   * @ORM\Column(type="string", length=256, name="email", unique=true) 
+   */
+  protected $email;
+  /** 
+   * @ORM\Column(type="string", length=256, name="password") 
    */
   protected $password;
   /**
-   * @ORM\Column(name="created_at", type="datetime", options={"default": "CURRENT_TIMESTAMP"})
+   * @ORM\Column(name="created_at", type="datetime", options={"default": "CURRENT_TIMESTAMP"}) 
    */
   protected $createdDateTime;
 
