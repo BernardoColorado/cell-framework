@@ -18,5 +18,7 @@ abstract class User{
   public abstract function setPassword(string $password):void;
   public abstract function validatePassword(string $password):bool;
   public abstract function getCreatedDateTime():DateTimeInterface;
+  public abstract function setPrivilege(Privilege $privilege):void;
+  public abstract function getPrivilege():Privilege;
 
 }

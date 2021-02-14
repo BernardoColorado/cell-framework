@@ -1,6 +1,8 @@
 <?php
 
 namespace App\User\Infrastructure\Doctrine\Entities;
+
+use App\User\DomainModel\Entities\Privilege;
 use Doctrine\ORM\Mapping as ORM;
 use App\User\DomainModel\Entities\User;
 use DateTimeInterface;
@@ -61,6 +63,12 @@ class DoctrineUser extends User{
   }
   public function getCreatedDateTime():DateTimeInterface{
     return $this->createdDateTime;
+  }
+  public function setPrivilege(Privilege $privilege):void{
+    $this->privilege = $privilege;
+  }
+  public function getPrivilege():Privilege{
+    return $this->privilege;
   }
 
 }
