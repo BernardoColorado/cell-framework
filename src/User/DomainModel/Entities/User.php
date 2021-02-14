@@ -3,7 +3,7 @@
 namespace App\User\DomainModel\Entities;
 use DateTimeInterface;
 
-abstract class User{
+class User{
 
   protected $id;
   protected $nickname;
@@ -11,14 +11,49 @@ abstract class User{
   protected $createdDateTime;
   protected $privilege;
 
-  public abstract function setEmail(string $email):void;
-  public abstract function getEmail():string;
-  public abstract function setNickname(string $nickname):void;
-  public abstract function getNickname():string;
-  public abstract function setPassword(string $password):void;
-  public abstract function validatePassword(string $password):bool;
-  public abstract function getCreatedDateTime():DateTimeInterface;
-  public abstract function setPrivilege(Privilege $privilege):void;
-  public abstract function getPrivilege():Privilege;
+  public function __construct(int $id=null,string $nickname=null,string $email=null,string $password=null,DateTimeInterface $createdDateTime=null,Privilege $privilege=null){
+    $this->setId($id);
+    $this->setNickname($nickname);
+    $this->setEmail($email);    
+    $this->setPassword($password);
+    $this->setCreatedDateTime($createdDateTime);
+    $this->setPrivilege($privilege);
+  }
+  public function setId(int $id):void{
+    $this->id = $id;
+  }
+  public function getId():int{
+    return $this->id;
+  }
+  public function setEmail(string $email):void{
+    $this->email = $email;
+  }
+  public function getEmail():string{
+    return $this->email;
+  }
+  public function setNickname(string $nickname):void{
+    $this->nickname = $nickname;
+  }
+  public function getNickname():string{
+    return $this->nickname;
+  }
+  public function setPassword(string $password):void{
+    $this->password=password_hash($password,PASSWORD_BCRYPT,['cost'=>10]);
+  }
+  public function validatePassword(string $password):bool{
+    return password_verify($password,$this->password);
+  }
+  public function setCreatedDateTime(DateTimeInterface $createdDateTime):void{
+    $this->createdDateTime = $createdDateTime;
+  }
+  public function getCreatedDateTime():DateTimeInterface{
+    return $this->createdDateTime;
+  }
+  public function setPrivilege(Privilege $privilege):void{
+    $this->privilege = $privilege;
+  }
+  public function getPrivilege():Privilege{
+    return $this->privilege;
+  }
 
 }
