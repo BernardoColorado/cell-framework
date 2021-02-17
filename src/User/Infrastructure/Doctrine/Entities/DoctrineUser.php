@@ -7,7 +7,7 @@ use App\User\DomainModel\Entities\Privilege;
 use App\User\DomainModel\Entities\User;
 use DateTimeInterface;
 /**
- * @ORM\Entity(repositoryClass="App\User\Infrastructure\Repositories")
+ * @ORM\Entity(repositoryClass="App\User\Infrastructure\Doctrine\Repositories")
  * @ORM\Table(name="users")
  */
 class DoctrineUser extends User{
@@ -33,11 +33,14 @@ class DoctrineUser extends User{
    * @ORM\Column(name="created_at", type="datetime", options={"default": "CURRENT_TIMESTAMP"}) 
    */
   protected $createdDateTime;
+  /**
+   * @ORM\ManyToOne(targetEntity="Categoria", inversedBy="users")
+   * @ORM\JoinColumn(name="id_privilege",referencedColumnName="id", onDelete="CASCADE")
+   */
+  protected $privilege;
 
   public function __construct(int $id=null,string $nickname=null,string $email=null,string $password=null,DateTimeInterface $createdDateTime=null,Privilege $privilege=null){
-
     parent::__construct($id,$nickname,$email,$password,$createdDateTime,$privilege);
-
   }
 
 }
