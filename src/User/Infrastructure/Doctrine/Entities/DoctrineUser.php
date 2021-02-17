@@ -34,7 +34,7 @@ class DoctrineUser extends User{
    */
   protected $createdDateTime;
   /**
-   * @ORM\ManyToOne(targetEntity="Categoria", inversedBy="users")
+   * @ORM\ManyToOne(targetEntity="DoctrinePrivilege", inversedBy="users")
    * @ORM\JoinColumn(name="id_privilege",referencedColumnName="id", onDelete="CASCADE")
    */
   protected $privilege;

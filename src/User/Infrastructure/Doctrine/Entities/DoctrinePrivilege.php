@@ -5,10 +5,9 @@ namespace App\User\Infrastructure\Doctine\Entities;
 use Doctrine\ORM\Mapping as ORM;
 use App\User\DomainModel\Entities\Privilege;
 /**
- * @ORM\Entity(repositoryClass="App\User\Infrastructure\Doctrine\Repositories")
  * @ORM\Table(name="privileges")
  */
-abstract class DoctrinePrivilege extends Privilege{
+class DoctrinePrivilege extends Privilege{
   /** 
    * @ORM\Id
    * @ORM\Column(type="integer", name="id")
