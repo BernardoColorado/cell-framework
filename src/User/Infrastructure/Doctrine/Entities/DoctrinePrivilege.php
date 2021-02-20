@@ -1,10 +1,11 @@
 <?php
 
-namespace App\User\Infrastructure\Doctine\Entities;
+namespace App\User\Infrastructure\Doctrine\Entities;
 
 use Doctrine\ORM\Mapping as ORM;
 use App\User\DomainModel\Entities\Privilege;
 /**
+ * @ORM\Entity
  * @ORM\Table(name="privileges")
  */
 class DoctrinePrivilege extends Privilege{

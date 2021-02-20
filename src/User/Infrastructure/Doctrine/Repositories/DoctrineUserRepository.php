@@ -47,14 +47,12 @@ class DoctrineUserRepository extends Repository implements UserRepositoryInterfa
     else{
 
       $user = new User();
-
-      $user->setId($doctrineUser->getId());
-      $user->setNickname($doctrineUser->getNickname());
-      $user->setEmail($doctrineUser->getEmail());
-      $user->setPrivilege($doctrineUser->getPrivilege());
-      $user->setCreatedDateTime($doctrineUser->getCreatedDateTime());
-      $user->setPrivilege($doctrineUser->getPrivilege());
-
+      $user->setId( $doctrineUser->getId() );
+      $user->setNickname( $doctrineUser->getNickname() );
+      $user->setEmail( $doctrineUser->getEmail() );
+      $user->setPrivilege( $doctrineUser->getPrivilege() );
+      $user->setCreatedDateTime( $doctrineUser->getCreatedDateTime() );
+      $user->setPrivilege( $doctrineUser->getPrivilege() );
       return $user;
 
     }
