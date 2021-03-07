@@ -3,7 +3,6 @@
 use Slim\Container;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager as DoctrineEntityManager;
-use App\Application\OWM\EntityManager\OWMEntityManager;
 
 require_once ROOT_DIR.'/config/config.php';
 
@@ -40,12 +39,6 @@ $container['twig']=function(Container $container){
   $uri = \Slim\Http\Uri::createFromEnvironment(new \Slim\Http\Environment($_SERVER));
   $view->addExtension(new \Slim\Views\TwigExtension($router, $uri));
   return $view;
-
-};
-
-$container['owm-entity-manager']=function(Container $container){
-
-  return new OWMEntityManager($container['google']['bigquery']);
 
 };
 
